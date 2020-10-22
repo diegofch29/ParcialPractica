@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package CoronaApp.model;
+package edu.escuelaing.parcialcoronaapp.modelCovid19;
 
 /**
  *
@@ -12,12 +12,14 @@ package CoronaApp.model;
 public class Country {
     
     public boolean error;
-    public String statusCode;
+    public Long statusCode;
+    public String message;
     public Data data;
 
-    public Country(boolean error, String statusCode, Data data) {
+    public Country(boolean error, Long statusCode,String message, Data data) {
         this.error = error;
         this.statusCode = statusCode;
+        this.message = message;
         this.data = data;
     }
 
@@ -25,7 +27,7 @@ public class Country {
         return error;
     }
 
-    public String getStatusCode() {
+    public Long getStatusCode() {
         return statusCode;
     }
 
@@ -37,7 +39,7 @@ public class Country {
         this.error = error;
     }
 
-    public void setStatusCode(String statusCode) {
+    public void setStatusCode(Long statusCode) {
         this.statusCode = statusCode;
     }
 
